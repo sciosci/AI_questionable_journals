@@ -43,7 +43,7 @@ import random
 
 
 
-df = pd.read_csv('doaj_journal_list_urls_from_doaj_bing_v1.csv')
+df = pd.read_csv('..//doaj_journal_list_urls_from_doaj_bing_v1.csv')
 
 unwhite_path = './screenshots/out_DOAJ/'
 white_path = './screenshots/in_DOAJ/'
@@ -154,8 +154,8 @@ def get_content_feature_local(urls,file_name,jobs,feature_dir,html_dir):
 #html_dir = './unpaywall_middle_result/'
 #unpaywall_path = './unpaywall_screenshots/'
 
-feature_dir = "D:\\predatory_journal\\release\\labeled_journal_feature_2025\\"
-html_dir = 'D:\\predatory_journal\\release\\labeled_journal_middle_results_2022\\'
+feature_dir = "..\\labeled_journal_feature_2025\\"
+html_dir = '..\\labeled_journal_middle_results_2022\\'
 
 
 for s in range(0,100):

@@ -52,10 +52,10 @@ import random
 #df.to_csv('journals_scraped.csv',index=False)
 from pathlib import Path
 
-#df = pd.read_csv('doaj_journal_list_urls_from_doaj_bing_v15.csv')
-df = pd.read_csv("D:\\predatory_journal\\survey_analysis\\Journals Survey No. 1 - Journals.csv")
+df = pd.read_csv('..\\data\\doaj_journal_list_urls_from_doaj_bing_v1.csv')
+#df = pd.read_csv("..\\survey_analysis\\Journals Survey No. 1 - Journals.csv")
 #resume previous downloading
-#df = df[~df['ISSN'].isin(os.listdir('D:\\predatory_journal\\release\\labeled_journal_middle_results_2022\\'))]
+#df = df[~df['ISSN'].isin(os.listdir('..\\labeled_journal_middle_results_2022\\'))]
 step = 10
 
 all_urls = df['Website'].tolist()
@@ -184,12 +184,10 @@ def download_css(urls,journals,jobs,saving_dir,chrome_path):
 
 
 
-#feature_dir = 'D:\\predatory_journal\\release\\labeled_journal_feature_data_missed_before\\'
-#saving_dir = 'D:\\predatory_journal\\release\\labeled_journal_middle_result_missed_before_with_css\\'
-#feature_dir = 'D:\\predatory_journal\\release\\unpaywall_feature_data_missed_before\\'
-#saving_dir = 'D:\\predatory_journal\\release\\unpaywall_middle_result_missed_before_with_css\\'
-feature_dir = 'D:\\predatory_journal\\survey_analysis\\survey_journal_features\\'
-saving_dir = 'D:\\predatory_journal\\survey_analysis\\survey_journal_middle_results\\'
+#feature_dir = '..\\labeled_journal_feature_data_missed_before\\'
+#saving_dir = '..\\labeled_journal_middle_result_missed_before_with_css\\'
+#feature_dir = '..\\survey_analysis\\survey_journal_features\\'
+#saving_dir = '..\\survey_analysis\\survey_journal_middle_results\\'
 
 print(len(all_urls) == len(all_journals))
 
